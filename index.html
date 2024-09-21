@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Episodes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <input type="text" id="search" placeholder="Search for episodes..." onkeyup="searchEpisodes()">
+        <button onclick="sortEpisodes()">Sort by Rating</button>
+        <div class="dropdown">
+            <button class="dropbtn">Select Seasons</button>
+            <div class="dropdown-content">
+                <label><input type="checkbox" value="1"> Season 1</label>
+                <label><input type="checkbox" value="2"> Season 2</label>
+                <label><input type="checkbox" value="3"> Season 3</label>
+                <label><input type="checkbox" value="4"> Season 4</label>
+                <label><input type="checkbox" value="5"> Season 5</label>
+                <label><input type="checkbox" value="6"> Season 6</label>
+                <label><input type="checkbox" value="7"> Season 7</label>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="container" id="episode-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="logic.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#seasonFilter').select2({
+                placeholder: "Select Seasons", // Placeholder text
+                allowClear: true // Option to clear the selection
+            });
+        });
+    </script>
+</body>
+
+</html>

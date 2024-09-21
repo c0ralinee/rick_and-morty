@@ -1,0 +1,153 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('img/rnm.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+/* Card container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card content */
+.card h3, .card p, .card a {
+    color: inherit;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 10px 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Button styling */
+.card a {
+    background-color: #007bff75;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.card a:hover {
+    background-color: #0057b38b;
+    transition: background-color 0.3s;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.navbar input[type="text"], .navbar button, select#seasonFilter {
+    height: 40px;
+    font-size: 16px;
+}
+
+.navbar input[type="text"] {
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.navbar button {
+    background-color: #007bff;
+    color: white;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
+}
+
+select#seasonFilter {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.dropbtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content label:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content input[type="checkbox"] {
+    margin-right: 10px;
+}
